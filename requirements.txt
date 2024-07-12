@@ -1,0 +1,15 @@
+torch
+torchvision
+numpy
+pandas
+argparse
+matplotlib
+scikit-learn
+nibabel
+datetime
+tqdm
+scipy
+statsmodels
+opencv-python
+tensorboard
+scikit-image
