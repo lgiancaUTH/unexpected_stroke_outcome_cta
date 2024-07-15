@@ -379,10 +379,10 @@ def main(ti, num_fold):
 if __name__ == "__main__":
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
-    # parser = argparse.ArgumentParser()
-    # parser.add_argument('--ti')
-    # parser.add_argument('--fold')
-    # args = parser.parse_args()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--ti')
+    parser.add_argument('--fold')
+    args = parser.parse_args()
     # Start
-    # main(args.ti, args.fold)
-    main(0, 1)
+    main(args.ti, args.fold)
+
