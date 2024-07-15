@@ -80,7 +80,7 @@ train/test_{ti}time_{n}fold.csv: n means Nth Fold, ti means TIth times.
 
 Run 5-fold cross validation 5 times
 
-`python3.10 run_inference.py --ti 5 --fold 5`
+`python run_inference.py --ti 5 --fold 5`
 
 The results will be written to `output_probs/auc_5fold_{ti}time.csv`. Those csv files contain all of testing subjects' probabilities and label.
 
@@ -88,7 +88,13 @@ Then, using `calculate_auc.py` to get average AUC score.
 
 ## Run an Example:
 
-1. Change 
+1. Change image path in config.py
+
+`IMG_PATH = 'input_img/example.npy'`
+
+2. Run inference.py
+
+`python inference.py --ti 0 --fold 1`
 
 # Acknowledgement
 This work is supported by the NIH NINDS R01NS121154. If you find this code useful, please consider citing our paper. 
