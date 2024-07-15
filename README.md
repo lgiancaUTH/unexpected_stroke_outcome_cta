@@ -86,6 +86,10 @@ The results will be written to `output_probs/auc_5fold_{ti}time.csv`. Those csv 
 
 Then, using `calculate_auc.py` to get average AUC score.
 
+## Run an Example:
+
+1. Change 
+
 # Acknowledgement
 This work is supported by the NIH NINDS R01NS121154. If you find this code useful, please consider citing our paper. 
 
