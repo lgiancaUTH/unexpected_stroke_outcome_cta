@@ -310,6 +310,10 @@ def main(ti, num_fold):
     currPredLst = []
     currProbLst = []
     test_fname = []
+    
+    ti = int(ti)
+    num_fold = int(num_fold)
+    
     for n in range(num_fold):
         test_df = load_csv(n, ti)
         # train_loader = build_loaders(train_df, doShuffle=True)
@@ -325,7 +329,7 @@ def main(ti, num_fold):
         model = CLIPModel().to(CFG.device)
 
         saved_best_dir = f'{CFG.model_file_name}/iteration_{ti}/fold_{n}/'
-        CFG.saved_best_model_name = f'{saved_best_dir}{os.listdir(saved_best_dir)[-1]}'
+        CFG.saved_best_model_name = f'{saved_best_dir}{os.listdir(saved_best_dir)[0]}'
         model.load_state_dict(torch.load(CFG.saved_best_model_name, map_location=CFG.device))
         print(f'Loaded the best model: {CFG.saved_best_model_name}')
         model.eval()
@@ -368,16 +372,17 @@ def main(ti, num_fold):
 
     length = len(currTgtLst)
     length_pred = len(currProbLst)
+    print(f'Target: {currTgtLst}, Pred: {currProbLst}')
     print(f'Test set AUC={aucValSet} with length {length} and {length_pred}') 
     #==================== 
     
 if __name__ == "__main__":
     torch.backends.cudnn.deterministic = True
     torch.backends.cudnn.benchmark = False
-    parser = argparse.ArgumentParser()
-    parser.add_argument('--ti')
-    parser.add_argument('--fold')
-    args = parser.parse_args()
+    # parser = argparse.ArgumentParser()
+    # parser.add_argument('--ti')
+    # parser.add_argument('--fold')
+    # args = parser.parse_args()
     # Start
-    main(args.ti, args.fold)
-
+    # main(args.ti, args.fold)
+    main(0, 1)
