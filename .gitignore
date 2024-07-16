@@ -1,2 +1,3 @@
 .DS_Store
-pretrained_weights/best_pretrained_CLIP_based_model_with_impression.pt
+__pychache__
+.vscode
