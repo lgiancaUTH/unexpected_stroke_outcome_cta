@@ -35,9 +35,9 @@ Create virtual environment
 
 To clone all files:
 
-`git clone https://gitpapl1.uth.tmc.edu/ydong4/smallfiv_mrs.git`
+`git clone https://github.com/lgiancaUTH/unexpected_stroke_outcome_cta.git`
 
-`cd smallfiv_mrs`
+`cd unexpected_stroke_outcome_cta`
 
 Install required package:
 
@@ -90,9 +90,15 @@ Then, using `calculate_auc.py` to get average AUC score.
 
 1. Change image path in config.py
 
+`BRAIN_NIFITI_PATH = 'input_img/registered_example.nii.gz'`
+
 `IMG_PATH = 'input_img/example.npy'`
 
-2. Run inference.py
+2. Get .npy from registered Nifti image
+
+`python get_npy_from_nifti.py` 
+
+3. Run inference on example image
 
 `python inference.py --ti 0 --fold 1`
 
