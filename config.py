@@ -1,6 +1,6 @@
-BRAIN_NIFTI_PATH = 'path-to-nifti' # preprocessed nifti images path
+BRAIN_NIFTI_PATH = 'input_img/registered_example.nii.gz' # preprocessed nifti images path
 
-IMG_PATH = 'input_img/'#'path-to-img' # input image data type is .npy
+IMG_PATH = 'input_img/registered_example.npy'#'path-to-img' # input image data type is .npy
 CSV_PATH = 'input_csv/' #path-to-csv
 
 SAVE_MODEL_LOG = 'saved_ckpt_latest' # path-to-saved-model-log
