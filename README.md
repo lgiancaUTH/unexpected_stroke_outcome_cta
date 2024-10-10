@@ -62,7 +62,7 @@ The pretrained model is similar to our group's previous work by [Pachade et al.]
 
 Image Encoder: [DeepSymNet v3](https://www.sciencedirect.com/science/article/pii/S2213158223000517)
 
-Text Encoder: [DistillBERT](https://arxiv.org/pdf/1910.01108)
+Text Encoder: [DistilBERT](https://arxiv.org/pdf/1910.01108)
 
 Structure: [CLIP](https://arxiv.org/pdf/2103.00020)-Based Loss Model
 
